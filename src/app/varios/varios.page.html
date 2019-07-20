@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Multijugador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<div >
+    <p>  Turno del jugador {{turno}}  </p> 
+    <ion-button ion-button round (click)="clickedStar()"> Lanzar dados Jugador 1 </ion-button>
+    <ion-button ion-button round (click)="dadobot1()"> Lanzar dados  Jugador 2 </ion-button>
+    <ion-button ion-button round (click)="dadobot2()"> Lanzar dados Jugador 3 </ion-button>
+    <ion-button ion-button round (click)="dadobot3()"> Lanzar dados Jugador 4 </ion-button>
+
+
+</div>
+<p>Jugador 1</p> <ion-icon name="bicycle"></ion-icon>
+<ion-progress-bar   class="progress-bar" color="secondary" [value]="jugador"><ion-icon name="bicycle"></ion-icon></ion-progress-bar>
+
+<p>Jugador 2</p> <ion-icon name="bicycle"></ion-icon>
+<ion-progress-bar class="progress-bar" color="secondary" [value]="bot1"></ion-progress-bar>
+
+<p>Jugador 3</p> <ion-icon name="bicycle"></ion-icon>
+<ion-progress-bar  class="progress-bar" color="secondary" [value]="bot2"></ion-progress-bar>
+
+<p>Jugador 4</p> <ion-icon name="bicycle"></ion-icon>
+<ion-progress-bar class="progress-bar" color="secondary"  [value]="bot3"></ion-progress-bar>
+
+<div class="centrado">   
+    <p>{{ganador}} </p>
+   
+
+
+    <ion-button ion-button round  (click)="limpiar()" >Jugar de nuevo</ion-button>
+    <ion-button ion-button round  routerLink="/home"  >Salir</ion-button>
+
+  
+
+</div>
+
+</ion-content>
